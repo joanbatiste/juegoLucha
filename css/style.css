@@ -2,27 +2,35 @@ body{
     background-color: black;
 }
 .container{
+    
     display: flex;
     flex-direction: column;
+    
 }
 .heroes{
+    align-items: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    
 }
 .luchadores{
-    width: 14.75em;
-    height: 22em;
+    width: 12em;
+    height: 17em;
     display: flex;
     object-fit: contain;
-    border: 0.3em solid red;
+    box-shadow: 0 0 40px rgb(4, 240, 44);
+    background: linear-gradient(to center, black, grey);
+    border-radius: 2em;
+    
 }
 .elegido {
     margin: 1em;
-    border: 0.5em solid green;
-    height: 18em;
-    width: 15em;
-    -webkit-filter: grayscale(100%); 
-    filter: grayscale(100%);
+    box-shadow: 0 0 45px rgb(241, 12, 4);
+    height: 16em;
+    width: 11em;
+    border-radius: 2em;
+    
 }
 .foto{
     width: 100%;
@@ -31,6 +39,7 @@ body{
 .seleccion{
     display: flex;
     flex-direction: row;
+    margin-top: 2em;
     border: 0.1em solid white;
 }
 .bando{
@@ -39,25 +48,51 @@ body{
     align-items: center;
     
     width: 40%;
-    height: 34em;
+    height: 27em;
     border: 0.1em solid white;
+}
+.rivales{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#rival1{
+    width: 12em;
+    height: 17em;
+    display: flex;
+    object-fit: contain;
+    box-shadow: 0 0 40px rgb(4, 240, 44);
+    background: linear-gradient(to center, black, grey);
+    border-radius: 2em;
+}
+.dire{
+    width: 12em;
+    height: 17em;
+    display: flex;
+    object-fit: contain;
+    box-shadow: 0 0 45px rgb(241, 12, 4);
+    background: linear-gradient(to center, black, grey);
+    border-radius: 2em;
 }
 .versus{
     display: flex;
     flex-direction: column;
     width: 20%;
-    height: 34em;
+    height: 27em;
     border: 0.1em solid white;
 }
 p1{
     font-family: Beatstreet;
-    font-size: 5em;
+    font-size: 3em;
     color: green;
     margin-top: 1em;
 }
 p2{
     font-family: Beatstreet;
-    font-size: 5em;
+    font-size: 3em;
     color: red;
     margin-top: 1em;
 }
