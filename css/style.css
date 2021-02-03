@@ -15,9 +15,10 @@ body{
     
 }
 .luchadores{
-    width: 12em;
-    height: 17em;
+    width: 10em;
+    height: 15em;
     display: flex;
+    align-items: center;
     object-fit: contain;
     box-shadow: 0 0 40px rgb(4, 240, 44);
     background: linear-gradient(to center, black, grey);
@@ -27,8 +28,8 @@ body{
 .elegido {
     margin: 1em;
     box-shadow: 0 0 45px rgb(241, 12, 4);
-    height: 16em;
-    width: 11em;
+    height: 14em;
+    width: 9em;
     border-radius: 2em;
     
 }
@@ -59,18 +60,19 @@ body{
     justify-content: space-between;
 
 }
-#rival1{
-    width: 12em;
-    height: 17em;
+.radiant{
+    width: 10em;
+    height: 15em;
     display: flex;
     object-fit: contain;
-    box-shadow: 0 0 40px rgb(4, 240, 44);
+    box-shadow: 0 0 45px rgb(4, 240, 44);
     background: linear-gradient(to center, black, grey);
     border-radius: 2em;
 }
+
 .dire{
-    width: 12em;
-    height: 17em;
+    width: 10em;
+    height: 15em;
     display: flex;
     object-fit: contain;
     box-shadow: 0 0 45px rgb(241, 12, 4);

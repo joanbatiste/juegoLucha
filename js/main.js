@@ -30,6 +30,9 @@ let p1="";
 let p2="";
 let p3="";
 let p4="";
+let equipoA = [];
+let equipoB = [];
+
 
 //Seleccion de equipos
 let selectPersonaje = (heroe)=>{
@@ -39,13 +42,7 @@ let selectPersonaje = (heroe)=>{
         equipoA.push(heroe);
         document.getElementById(heroe).className="elegido";
         document.getElementById(heroe).onclick="";
-        let showPlayer1 = document.getElementById("rival1");
-        showPlayer1.innerHTML = `<div ><img src="img/${equipoA[0]}.png"></div>`
-        let showPlayer2 = document.getElementById("rival2");
-        showPlayer2.innerHTML = `<div ><img src="img/${equipoA[1]}.png"></div>`
-        let showPlayer3 = document.getElementById("rival3");
-        showPlayer3.innerHTML = `<div ><img src="img/${equipoA[2]}.png"></div>`
-
+        rellenarRadiant();
         //Seleccion heroes equipo B
     }else if(equipoB.length < 3){
         equipoB.push(heroe);
@@ -53,6 +50,7 @@ let selectPersonaje = (heroe)=>{
         document.getElementById(heroe).onclick="";
 
         
+        rellenarDire();
 
 
     };
@@ -60,9 +58,31 @@ let selectPersonaje = (heroe)=>{
     console.log("El equipo A: ", equipoA);
     console.log("El equipo B: ", equipoB);
     
+
+};
+let rellenarRadiant = ()=>{
+    for(let i=0; i < equipoA.length; i++ ){
+        let showPlayer1 = document.getElementById("rival1");
+        showPlayer1.innerHTML = `<div ><img src="img/${equipoA[0]}.png"></div>`
+        let showPlayer2 = document.getElementById("rival2");
+        showPlayer2.innerHTML = `<div ><img src="img/${equipoA[1]}.png"></div>`
+        let showPlayer3 = document.getElementById("rival3");
+        showPlayer3.innerHTML = `<div ><img src="img/${equipoA[2]}.png"></div>`
+
+    };
+};
+let rellenarDire = ()=>{
+    for(let i=0; i < equipoB.length; i++ ){
+        let showPlayer4 = document.getElementById("rival4");
+        showPlayer4.innerHTML = `<div ><img src="img/${equipoB[0]}.png"></div>`
+        let showPlayer5 = document.getElementById("rival5");
+        showPlayer5.innerHTML = `<div ><img src="img/${equipoB[1]}.png"></div>`
+        let showPlayer6 = document.getElementById("rival6");
+        showPlayer6.innerHTML = `<div ><img src="img/${equipoB[2]}.png"></div>`
+
+        
+
+    };
 };
 
-
-let equipoA = [];
-let equipoB = [];
 
