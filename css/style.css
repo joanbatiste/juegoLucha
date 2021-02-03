@@ -5,8 +5,32 @@ body{
     
     display: flex;
     flex-direction: column;
+}   
+.pantallaInicio{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/wp3070125.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+h1{
+    font-family: Beatstreet;
+    font-size: 6em;
+    color: rgb(226, 79, 21);
     
 }
+
+.fondo{
+    display: flex;
+    position: relative;
+    margin-top: 37em;
+    margin-left: 65em;
+    
+}
+
+
 .heroes{
     align-items: center;
     display: flex;
@@ -21,7 +45,7 @@ body{
     align-items: center;
     object-fit: contain;
     box-shadow: 0 0 40px rgb(4, 240, 44);
-    background: linear-gradient(to center, black, grey);
+    background: linear-gradient(to top, black, grey);
     border-radius: 2em;
     
 }
@@ -82,6 +106,8 @@ body{
 .versus{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 20%;
     height: 27em;
     border: 0.1em solid white;
@@ -97,4 +123,54 @@ p2{
     font-size: 3em;
     color: red;
     margin-top: 1em;
+}
+.lucha1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.combate1{
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 0.1em solid white;
+}
+.p1equipoA{
+    width: 10em;
+    height: 15em;
+    display: flex;
+    object-fit: contain;
+    box-shadow: 0 0 45px rgb(4, 240, 44);
+    background: linear-gradient(to center, black, grey);
+    border-radius: 2em;
+}
+.p1equipoB{
+    width: 10em;
+    height: 15em;
+    display: flex;
+    object-fit: contain;
+    box-shadow: 0 0 45px rgb(241, 12, 4);
+    background: linear-gradient(to center, black, grey);
+    border-radius: 2em;
+}
+.botonPegar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7em;
+    height: 7em;
+    border: 0.1em solid white;
+    
+}
+.attack{
+    height: 5em;
+    height: 5em;
+    background-color: orange;
+    margin: 1em;
 }

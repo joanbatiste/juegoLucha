@@ -5,38 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    
+    <title>Dota 2</title>
 </head>
 <body>
     <div class="container">
-        <div class="heroes">
-            <div class="luchadores" id="Lich" onclick="selectPersonaje('Lich')"><img class="foto"src="img/Lich.png"></div>
-            <div class="luchadores" id="King" onclick="selectPersonaje('King')"><img class="foto" src="img/King.png"></div>
-            <div class="luchadores" id="Sniper" onclick="selectPersonaje('Sniper')"><img class="foto" src="img/sniper.png"></div>
-            <div class="luchadores" id="Luna" onclick="selectPersonaje('Luna')"><img class="foto" src="img/luna.png"></div>
-            <div class="luchadores" id="Antimage" onclick="selectPersonaje('Antimage')"><img class="foto" src="img/antimage.png"></div>
-            <div class="luchadores" id="Juggernaut" onclick="selectPersonaje('Juggernaut')"><img class="foto" src="img/juggernaut.png"></div>
-            <div class="luchadores" id="Drow" onclick="selectPersonaje('Drow')"><img class="foto" src="img/Drow.png"></div>
-            <div class="luchadores" id="Viper" onclick="selectPersonaje('Viper')"><img class="foto" src="img/viper.png"></div>
+        <div id="screenIntro" class="pantallaInicio" style="display: none;">
+            <div class="fondo">
+                <h1 onclick="cambiarPantalla()">CLICK TO START</h1>
+                
+            </div>
+        
         </div>
 
-        <div class="seleccion">
-            <div class="bando" id="radiant"><p1>Radiant Selection</p1>
-                <div class="rivales">
-                    <div class="radiant" id="rival1"></div>
-                    <div class="radiant" id="rival2"></div>
-                    <div class="radiant" id="rival3"></div>
-                </div>
+        <div id="screen1" clase="pantallaEquipos" style="display: none;">
+            <div class="heroes">
+                <div class="luchadores" id="Lich" onclick="selectPersonaje('Lich')"><img class="foto"src="img/Lich.png"></div>
+                <div class="luchadores" id="King" onclick="selectPersonaje('King')"><img class="foto" src="img/King.png"></div>
+                <div class="luchadores" id="Sniper" onclick="selectPersonaje('Sniper')"><img class="foto" src="img/sniper.png"></div>
+                <div class="luchadores" id="Luna" onclick="selectPersonaje('Luna')"><img class="foto" src="img/luna.png"></div>
+                <div class="luchadores" id="Antimage" onclick="selectPersonaje('Antimage')"><img class="foto" src="img/antimage.png"></div>
+                <div class="luchadores" id="Juggernaut" onclick="selectPersonaje('Juggernaut')"><img class="foto" src="img/juggernaut.png"></div>
+                <div class="luchadores" id="Drow" onclick="selectPersonaje('Drow')"><img class="foto" src="img/Drow.png"></div>
+                <div class="luchadores" id="Viper" onclick="selectPersonaje('Viper')"><img class="foto" src="img/viper.png"></div>
             </div>
-            
-            <div class="versus"><img src="img/giphy.gif"></div>
 
-            <div class="bando" id="dire"><p2>Dire Selection</p2>
-                <div class="rivales">
-                    <div class="dire" id="rival4"></div>
-                    <div class="dire" id="rival5"></div>
-                    <div class="dire" id="rival6"></div>
+            <div class="seleccion">
+                <div class="bando" id="radiant"><p1>Radiant Selection</p1>
+                    <div class="rivales">
+                        <div class="radiant" id="rival1"></div>
+                        <div class="radiant" id="rival2"></div>
+                        <div class="radiant" id="rival3"></div>
+                    </div>
+                </div>
+            
+                <div class="versus"><img src="img/giphy.gif"></div>
+
+                <div class="bando" id="dire"><p2>Dire Selection</p2>
+                    <div class="rivales">
+                        <div class="dire" id="rival4"></div>
+                        <div class="dire" id="rival5"></div>
+                        <div class="dire" id="rival6"></div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div id="screen2" class="lucha1" style="display: block;">
+            <div class="combate1">
+                <div class="p1equipoA"></div>
+                <div class="p1equipoB"></div>
+            </div>
+        
+            <div class="botonPegar">
+                <div id="strike" class="attack" onclick="atacar()"></div>
+            </div>
+        
+        
+        
         </div>
 
 
