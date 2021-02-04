@@ -144,24 +144,8 @@ p2{
     justify-content: space-evenly;
     border: 0.1em solid white;
 }
-.p1equipoA{
-    width: 10em;
-    height: 15em;
-    display: flex;
-    object-fit: contain;
-    box-shadow: 0 0 45px rgb(4, 240, 44);
-    background: linear-gradient(to center, black, grey);
-    border-radius: 2em;
-}
-.p1equipoB{
-    width: 10em;
-    height: 15em;
-    display: flex;
-    object-fit: contain;
-    box-shadow: 0 0 45px rgb(241, 12, 4);
-    background: linear-gradient(to center, black, grey);
-    border-radius: 2em;
-}
+
+
 .botonPegar{
     display: flex;
     align-items: center;

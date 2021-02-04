@@ -6,14 +6,16 @@ class Luchador{
         this.fuerza = fuerza;
         this.defensa = defensa;
         this.inteligencia = inteligencia;
+        this.handicap = inteligencia - Math.floor(Math.random()*5);
     };
     ataque(enemigo){
         enemigo.vida -= this.fuerza - enemigo.defensa;
     };
     ataqueEspecial(enemigo){
+        enemigo.vida -= (this.fuerza * 0.5 + this.fuerza)*(this.inteligencia - this.handicap);
 
     };
-    defensa(enemigo){
+    defensa(){
 
     };
 };
@@ -66,15 +68,10 @@ let selectPersonaje = (heroe)=>{
     if(equipoA.length < 3){
         //equipoA.push(heroe);
         equipoA.push(allheros[heroe]);
-    
-        
         document.getElementById(heroe).className="elegido";
         document.getElementById(heroe).onclick="";
-        
-
-
         rellenarRadiant();
-        
+        mostrarLuchadoresA();
         
         //Seleccion heroes equipo B
     }else if(equipoB.length < 3){
@@ -82,9 +79,14 @@ let selectPersonaje = (heroe)=>{
         equipoB.push(allheros[heroe]);
         document.getElementById(heroe).className="elegido";
         document.getElementById(heroe).onclick="";
-   
-        //Cambiar de pantalla porque ya tenemos a los personajes elegidos
         rellenarDire();
+        mostrarLuchadoresB();
+        //enviar heroes a su pantalla lucha
+        
+
+
+        //Cambiar de pantalla porque ya tenemos a los personajes elegidos
+        
         resolveIn(1000).then(delay => {
 
             cambiaPantalla("screen1","screen2");
@@ -121,4 +123,51 @@ let rellenarDire = ()=>{
     };
 };
 
+let mostrarLuchadoresA = () =>{
+    for(let i = 0; i<equipoA.length; i++){
+        let p1 = document.getElementById("p1equipoA");
+        p1.innerHTML = `<div ><img src="img/${equipoA[0].nombre}.png"></div>`;
+        
+    }
+    
+}
+let mostrarLuchadoresB = () =>{
+    for(let i = 0; i<equipoB.length; i++){
+        let p4 = document.getElementById("p1equipoB");
+        p4.innerHTML = `<div ><img src="img/${equipoB[0].nombre}.png"></div>`;
+        
+    }
+    
+}
+let atacar = () => {
+    //Funcion de ataque;
+    let turno = Math.floor(Math.random() * 2);
+    let especial = Math.floor(Math.random() * 5);
 
+    if(turno == 0){
+        if(especial == 3){
+            console.log("ATAQUE ESPECIAL");
+            p1.ataqueEspecial(p4);
+        }else{
+
+            p1.ataque(p4);
+        }
+    }else{
+        if(especial == 3){
+            console.log("ATAQUE ESPECIAL");
+            p4.ataqueEspecial(p1);
+        }else{
+            p4.ataque(p1);
+
+        }
+    };
+
+    console.log(p1.nombre + p1.vida);
+    console.log(p4.nombre + p4.vida);
+    
+};
+
+
+
+console.log(equipoA);
+console.log(equipoB);
