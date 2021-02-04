@@ -72,6 +72,7 @@ let selectPersonaje = (heroe)=>{
         document.getElementById(heroe).onclick="";
         rellenarRadiant();
         mostrarLuchadoresA();
+        asignacionRadiant();
         
         //Seleccion heroes equipo B
     }else if(equipoB.length < 3){
@@ -81,6 +82,7 @@ let selectPersonaje = (heroe)=>{
         document.getElementById(heroe).onclick="";
         rellenarDire();
         mostrarLuchadoresB();
+        asignacionDire();
         //enviar heroes a su pantalla lucha
         
 
@@ -96,12 +98,14 @@ let selectPersonaje = (heroe)=>{
     };
     console.log("El equipo A: ", equipoA);
     console.log("El equipo B: ", equipoB);
+    console.log(p1,p2,p3,p4,p5,p6);
 };
 
 //Función para el delay
 const resolveIn = delay =>
 new Promise(res => setTimeout(() => res(delay), delay));
 
+//Rellenamos los heros del equipo Radiant
 let rellenarRadiant = ()=>{
     for(let i=0; i < equipoA.length; i++ ){
         let showPlayer1 = document.getElementById("rival1");
@@ -112,6 +116,7 @@ let rellenarRadiant = ()=>{
         showPlayer3.innerHTML = `<div ><img src="img/${equipoA[2].nombre}.png"></div>`
     };
 };
+//Rellenamos los jugadores del equipo Dire
 let rellenarDire = ()=>{
     for(let i=0; i < equipoB.length; i++ ){
         let showPlayer4 = document.getElementById("rival4");
@@ -122,23 +127,50 @@ let rellenarDire = ()=>{
         showPlayer6.innerHTML = `<div ><img src="img/${equipoB[2].nombre}.png"></div>`
     };
 };
-
+//Enviamos cada heroe a su pantalla de lucha
 let mostrarLuchadoresA = () =>{
     for(let i = 0; i<equipoA.length; i++){
-        let p1 = document.getElementById("p1equipoA");
+        let p1 = document.getElementById("p1");
         p1.innerHTML = `<div ><img src="img/${equipoA[0].nombre}.png"></div>`;
-        
+        let p2 = document.getElementById("p2");
+        p2.innerHTML = `<div ><img src="img/${equipoA[1].nombre}.png"></div>`;
+        let p3 = document.getElementById("p3");
+        p3.innerHTML = `<div ><img src="img/${equipoA[2].nombre}.png"></div>`;
     }
     
 }
 let mostrarLuchadoresB = () =>{
     for(let i = 0; i<equipoB.length; i++){
-        let p4 = document.getElementById("p1equipoB");
+        let p4 = document.getElementById("p4");
         p4.innerHTML = `<div ><img src="img/${equipoB[0].nombre}.png"></div>`;
-        
+        let p5 = document.getElementById("p5");
+        p5.innerHTML = `<div ><img src="img/${equipoB[1].nombre}.png"></div>`;
+        let p6 = document.getElementById("p6");
+        p6.innerHTML = `<div ><img src="img/${equipoB[2].nombre}.png"></div>`;
     }
     
 }
+//Asignacion de heroes con su correspondiente player
+let asignacionRadiant = () =>{
+    for(let i = 0; i< equipoA.length; i++){
+        p1 = equipoA[0];
+        p2 = equipoA[1];
+        p3 = equipoA[2];
+
+    };
+
+};
+let asignacionDire = () =>{
+    for(let i = 0; i< equipoA.length; i++){
+        p4 = equipoB[0];
+        p5 = equipoB[1];
+        p6 = equipoB[2];
+
+    };
+
+};
+
+//Función para el ataque
 let atacar = () => {
     //Funcion de ataque;
     let turno = Math.floor(Math.random() * 2);
@@ -148,23 +180,29 @@ let atacar = () => {
         if(especial == 3){
             console.log("ATAQUE ESPECIAL");
             p1.ataqueEspecial(p4);
+            p2.ataqueEspecial(p5)
         }else{
 
             p1.ataque(p4);
+            p2.ataque(p5);
         }
     }else{
         if(especial == 3){
             console.log("ATAQUE ESPECIAL");
             p4.ataqueEspecial(p1);
+            p5.ataqueEspecial(p2);
+
         }else{
             p4.ataque(p1);
+            p5.ataque(p2);
 
         }
     };
 
     console.log(p1.nombre + p1.vida);
     console.log(p4.nombre + p4.vida);
-    
+    console.log(p5.nombre + p2.vida);
+    console.log(p2.nombre + p5.vida);
 };
 
 
