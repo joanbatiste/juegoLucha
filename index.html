@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="container">
-        <div id="screenIntro" class="pantallaInicio" style="display: none;">
-            <div class="fondo">
-                <h1 onclick="cambiarPantalla()">CLICK TO START</h1>
+        <div id="screenIntro" class="pantallaInicio" style="display: flex;">
+            <div onclick="cambiaPantalla('screenIntro','screen1')" class="fondo">
+                <h1 >CLICK TO START</h1>
                 
             </div>
         
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div id="screen2" class="lucha1" style="display: block;">
+        <div id="screen2" class="lucha1" style="display: none;">
             <div class="combate1">
                 <div class="p1equipoA"></div>
                 <div class="p1equipoB"></div>

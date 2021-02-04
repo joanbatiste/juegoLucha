@@ -5,6 +5,7 @@ body{
     
     display: flex;
     flex-direction: column;
+    font-family: 'Beatstreet';
 }   
 .pantallaInicio{
     width: 100%;
@@ -16,7 +17,7 @@ body{
     background-attachment: fixed;
 }
 h1{
-    font-family: Beatstreet;
+    font-family: 'Beatstreet';
     font-size: 6em;
     color: rgb(226, 79, 21);
     
@@ -26,10 +27,12 @@ h1{
     display: flex;
     position: relative;
     margin-top: 37em;
-    margin-left: 65em;
-    
+    margin-left: 65em;   
 }
-
+#screen1{
+    display: flex;
+    flex-direction: column;
+}
 
 .heroes{
     align-items: center;
@@ -168,9 +171,9 @@ p2{
     border: 0.1em solid white;
     
 }
-.attack{
-    height: 5em;
+#strike{
+    width: 5em;
     height: 5em;
     background-color: orange;
-    margin: 1em;
+    cursor: pointer;
 }

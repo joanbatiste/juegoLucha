@@ -57,7 +57,7 @@ let cambiaPantalla = (faseAhora,faseFutura) => {
     //aqui procedemos con el cambio
 
     pantallaActual.style.display = "none";
-    pantallaDestino.style.display = "block";
+    pantallaDestino.style.display = "flex";
 };
 //Seleccion de equipos
 let selectPersonaje = (heroe)=>{
