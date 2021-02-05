@@ -9,10 +9,10 @@ class Luchador{
         this.handicap = inteligencia - Math.floor(Math.random()*5);
     };
     ataque(enemigo){
-        enemigo.vida -= this.fuerza - enemigo.defensa;
+        enemigo.vida -= (this.fuerza - enemigo.defensa)*(this.inteligencia-this.handicap);
     };
     ataqueEspecial(enemigo){
-        enemigo.vida -= (this.fuerza * 0.5 + this.fuerza)*(this.inteligencia - this.handicap);
+        enemigo.vida -= (this.fuerza * 0.5 + this.fuerza)-enemigo.defensa;
 
     };
     defensa(){
@@ -161,7 +161,7 @@ let asignacionRadiant = () =>{
 
 };
 let asignacionDire = () =>{
-    for(let i = 0; i< equipoA.length; i++){
+    for(let i = 0; i< equipoB.length; i++){
         p4 = equipoB[0];
         p5 = equipoB[1];
         p6 = equipoB[2];
@@ -175,34 +175,41 @@ let atacar = () => {
     //Funcion de ataque;
     let turno = Math.floor(Math.random() * 2);
     let especial = Math.floor(Math.random() * 5);
-
+    showVidaP1= document.getElementById("vidap1");
+    showVidaP4= document.getElementById("vidap4");
     if(turno == 0){
         if(especial == 3){
             console.log("ATAQUE ESPECIAL");
+         
             p1.ataqueEspecial(p4);
-            p2.ataqueEspecial(p5)
+            
         }else{
-
+       
             p1.ataque(p4);
-            p2.ataque(p5);
-        }
+            
+        };
     }else{
         if(especial == 3){
             console.log("ATAQUE ESPECIAL");
+
             p4.ataqueEspecial(p1);
-            p5.ataqueEspecial(p2);
+            
 
         }else{
             p4.ataque(p1);
-            p5.ataque(p2);
-
-        }
+            
+        };
+        
     };
+    
+    showVidaP1.innerHTML = `${p1.vida}`;
+    showVidaP4.innerHTML = `${p4.vida}`;
+
+
 
     console.log(p1.nombre + p1.vida);
     console.log(p4.nombre + p4.vida);
-    console.log(p5.nombre + p2.vida);
-    console.log(p2.nombre + p5.vida);
+
 };
 
 

@@ -5,29 +5,33 @@ body{
     
     display: flex;
     flex-direction: column;
-    font-family: 'Beatstreet';
+    ;
 }   
 .pantallaInicio{
     width: 100%;
     height: 100%;
-    background-image: url(../img/wp3070125.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-}
-h1{
-    font-family: 'Beatstreet';
-    font-size: 6em;
+    display: flex;
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
     color: rgb(226, 79, 21);
-    
+}
+.pantallaInicio img{
+    width: 100%;
+    height: auto;
+}
+@supports(object-fit: cover){
+    .pantallaInicio img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
 }
 
 .fondo{
     display: flex;
-    position: relative;
-    margin-top: 37em;
-    margin-left: 65em;   
+    
+   
+       
 }
 #screen1{
     display: flex;
@@ -128,12 +132,7 @@ p2{
     margin-top: 1em;
 }
 #screen2{
-    
-    background-image: url(../img/mapaDota.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -150,30 +149,14 @@ p2{
     justify-content: space-evenly;
     border: 0.1em solid white;
 }
-.combate2{
-    width: 100%;
-    height: 20em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 0.1em solid white;
-}
-.combate3{
-    width: 100%;
-    height: 20em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 0.1em solid white;
-}
+
 
 .botonPegar{
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 7em;
+    width: 100%;
     height: 7em;
     border: 0.1em solid white;
     
@@ -183,4 +166,19 @@ p2{
     height: 5em;
     background-color: orange;
     cursor: pointer;
+}
+.contadorVida{
+    width: 7em;
+    height: 3em;
+    border: 0.1em solid white;
+    margin-right: 12em;
+    margin-left: 12em;
+}
+#vidap1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+#vidap4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }

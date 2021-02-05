@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap" rel="stylesheet">
     
     <title>Dota 2</title>
 </head>
 <body>
     <div class="container">
-        <div id="screenIntro" class="pantallaInicio" style="display: flex;">
-            <div onclick="cambiaPantalla('screenIntro','screen1')" class="fondo">
-                <h1 >CLICK TO START</h1>
-                
-            </div>
-        
+        <div id="screenIntro" class="pantallaInicio" style="display: flex;"onclick="cambiaPantalla('screenIntro','screen1')">
+            
+            <img src="img/wp3070125.jpg">
+
         </div>
 
         <div id="screen1" clase="pantallaEquipos" style="display: none;">
@@ -54,19 +53,51 @@
         <div id="screen2" class="lucha1" style="display: none;">
            
             <div class="combate1">
+                
                 <div class="radiant" id="p1"></div>
                 <div class="dire" id="p4"></div>
+                
             </div>
-            <div class="combate2">
+            
+        
+            <div class="botonPegar">
+                <p>Vida Lich</p>
+                <div class="contadorVida" id="vidap1"></div>
+                <div id="strike" class="attack" onclick="atacar()"></div>
+                <div class="contadorVida" id="vidap4"></div>
+                <p>Vida Luna</p>
+            </div>
+           
+        
+        
+        </div>
+
+        <div id="screen3" class="lucha2" style="display: none;">
+            
+            <div class="combate1">
+                
                 <div class="radiant" id="p2"></div>
                 <div class="dire" id="p5"></div>
-
             </div>
-            <div class="combate3">
+            
+        
+            <div class="botonPegar">
+                <div class= "vidaplayers" id="vidap1"></div>
+                <div id="strike" class="attack" onclick="atacar()"></div>
+                <div class= "vidaplayers" id="vidap4"></div>
+            </div>
+           
+        
+        
+        </div>
+
+        <div id="screen3" class="lucha3" style="display: none;">
+           
+            <div class="combate1">
                 <div class="radiant" id="p3"></div>
                 <div class="dire" id="p6"></div>
-
             </div>
+            
         
             <div class="botonPegar">
                 <div id="strike" class="attack" onclick="atacar()"></div>
