@@ -27,12 +27,7 @@ body{
     }
 }
 
-.fondo{
-    display: flex;
-    
-   
-       
-}
+
 #screen1{
     display: flex;
     flex-direction: column;
@@ -120,14 +115,14 @@ body{
     border: 0.1em solid white;
 }
 p1{
-    font-family: Beatstreet;
-    font-size: 3em;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
     color: green;
     margin-top: 1em;
 }
 p2{
-    font-family: Beatstreet;
-    font-size: 3em;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
     color: red;
     margin-top: 1em;
 }
@@ -175,10 +170,14 @@ p2{
     margin-left: 12em;
 }
 #vidap1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Cinzel', serif;
     color: white;
 }
 #vidap4{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Cinzel', serif;
     color: white;
+}
+#winner1{
+    font-family: 'Cinzel', serif;
+    color: tomato;
 }

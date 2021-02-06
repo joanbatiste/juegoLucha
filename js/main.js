@@ -20,14 +20,14 @@ class Luchador{
     };
 };
 //Instanciamos los jugadores y variables
-let player1 = new Luchador("Lich",300,30,40,50);
-let player2 = new Luchador("King",300,50,40,30);
-let player3 = new Luchador("Sniper",300,40,45,40);
-let player4 = new Luchador("Luna",300, 40, 35,45);
-let player5 = new Luchador("Antimage", 300, 50,45,35);
-let player6 = new Luchador("Juggernaut",300, 45, 40,40);
-let player7 = new Luchador("Drow",300, 40, 45,40);
-let player8 = new Luchador("Viper",300, 50, 35,45);
+let player1 = new Luchador("Lich",200,40,30,20);
+let player2 = new Luchador("King",200,50,40,10);
+let player3 = new Luchador("Sniper",200,40,30,15);
+let player4 = new Luchador("Luna",200, 40, 35,20);
+let player5 = new Luchador("Antimage", 200, 50,35,15);
+let player6 = new Luchador("Juggernaut",200, 45, 40,20);
+let player7 = new Luchador("Drow",200, 40, 35,15);
+let player8 = new Luchador("Viper",200, 50, 30,15);
 
 
 let p1="";
@@ -86,7 +86,7 @@ let selectPersonaje = (heroe)=>{
         //enviar heroes a su pantalla lucha
         
 
-
+        
         //Cambiar de pantalla porque ya tenemos a los personajes elegidos
         
         resolveIn(1000).then(delay => {
@@ -99,6 +99,7 @@ let selectPersonaje = (heroe)=>{
     console.log("El equipo A: ", equipoA);
     console.log("El equipo B: ", equipoB);
     console.log(p1,p2,p3,p4,p5,p6);
+    
 };
 
 //Función para el delay
@@ -175,8 +176,7 @@ let atacar = () => {
     //Funcion de ataque;
     let turno = Math.floor(Math.random() * 2);
     let especial = Math.floor(Math.random() * 5);
-    showVidaP1= document.getElementById("vidap1");
-    showVidaP4= document.getElementById("vidap4");
+    
     if(turno == 0){
         if(especial == 3){
             console.log("ATAQUE ESPECIAL");
@@ -202,17 +202,37 @@ let atacar = () => {
         
     };
     
-    showVidaP1.innerHTML = `${p1.vida}`;
-    showVidaP4.innerHTML = `${p4.vida}`;
+    showVidaP1= document.getElementById("vidap1");
+    showVidaP4= document.getElementById("vidap4");
+    mensaje = document.getElementById("winner1");
+    if (p1.vida < 1){
+        
+        mensaje.innerHTML = `¡¡¡${p4.nombre} Wins!!!`;
+        resolveIn(1000).then(delay => {
 
+            cambiaPantalla("screen2","screen3");
+            
+        });
+    }else if(p4q.vida < 1){
+        mensaje.innerHTML = `¡¡¡${p1.nombre} Wins!!!`;
+        resolveIn(1000).then(delay => {
 
-
-    console.log(p1.nombre + p1.vida);
-    console.log(p4.nombre + p4.vida);
+            cambiaPantalla("screen2","screen3");
+            
+        });
+    }else{
+        showVidaP1.innerHTML = `${p1.vida}`;
+        showVidaP4.innerHTML = `${p4.vida}`;
+    };
 
 };
+    
 
 
+//Ganador combates
 
-console.log(equipoA);
-console.log(equipoB);
+    
+    
+    
+
+
