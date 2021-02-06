@@ -166,18 +166,77 @@ p2{
     width: 7em;
     height: 3em;
     border: 0.1em solid white;
-    margin-right: 12em;
-    margin-left: 12em;
+    
 }
 #vidap1{
     font-family: 'Cinzel', serif;
     color: white;
+    font-size: 2em;
 }
 #vidap4{
     font-family: 'Cinzel', serif;
     color: white;
+    font-size: 2em;
 }
 #winner1{
     font-family: 'Cinzel', serif;
     color: tomato;
+    font-size: 2em;
+}
+#screen3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#vidap2{
+    font-family: 'Cinzel', serif;
+    color: white;
+    font-size: 2em;
+}
+#vidap5{
+    font-family: 'Cinzel', serif;
+    color: white;
+    font-size: 2em;
+}
+#strike1{
+    width: 5em;
+    height: 5em;
+    background-color: orange;
+    cursor: pointer;
+}
+#strike2{
+    width: 5em;
+    height: 5em;
+    background-color: orange;
+    cursor: pointer;
+}
+#winner2{
+    font-family: 'Cinzel', serif;
+    color: tomato;
+    font-size: 2em;
+}
+#screen4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#winner3{
+    font-family: 'Cinzel', serif;
+    color: tomato;
+    font-size: 2em;
+}
+#vidap3{
+    font-family: 'Cinzel', serif;
+    color: white;
+    font-size: 2em;
+}
+#vidap6{
+    font-family: 'Cinzel', serif;
+    color: white;
+    font-size: 2em;
 }
