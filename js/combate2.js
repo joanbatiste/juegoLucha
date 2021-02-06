@@ -44,14 +44,20 @@ let combatWiner1= () =>{
         resolveIn(1000).then(delay => {
 
             cambiaPantalla("screen3","screen4");
-            
+            showNombreP3= document.getElementById("fighter3");
+            showNombreP3.innerHTML = `${p3.nombre}`;
+            showNombreP6= document.getElementById("fighter6");
+            showNombreP6.innerHTML = `${p6.nombre}`;
         });
     }else if(p5.vida < 1){
         mensaje.innerHTML = `¡¡¡${p2.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
             cambiaPantalla("screen3","screen4");
-            
+            showNombreP3= document.getElementById("fighter3");
+            showNombreP3.innerHTML = `${p3.nombre}`;
+            showNombreP6= document.getElementById("fighter6");
+            showNombreP6.innerHTML = `${p6.nombre}`;
         });    
     };
     console.log(p2.vida);

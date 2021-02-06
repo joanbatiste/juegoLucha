@@ -85,19 +85,22 @@ let selectPersonaje = (heroe)=>{
         asignacionDire();
         mostrarLuchadoresB();
         
-        //enviar heroes a su pantalla lucha
         
-
         
         //Cambiar de pantalla porque ya tenemos a los personajes elegidos
         
         resolveIn(1000).then(delay => {
 
             cambiaPantalla("screen1","screen2");
+            showNombreP1 = document.getElementById("fighter1");
+            showNombreP1.innerHTML = `${p1.nombre}`;
+            showNombreP4= document.getElementById("fighter4");
+            showNombreP4.innerHTML = `${p4.nombre}`;
             
         });
     
     };
+    
     console.log("El equipo A: ", equipoA);
     console.log("El equipo B: ", equipoB);
     console.log(p1,p2,p3,p4,p5,p6);
@@ -142,7 +145,8 @@ let mostrarLuchadoresA = () =>{
         p3.innerHTML = `<div ><img src="img/${equipoA[2].nombre}.png"></div>`;
     }
     vidaJugadoresRadiant();
-}
+    
+};
 let mostrarLuchadoresB = () =>{
     for(let i = 0; i<equipoB.length; i++){
         let p4 = document.getElementById("p4");
@@ -153,7 +157,8 @@ let mostrarLuchadoresB = () =>{
         p6.innerHTML = `<div ><img src="img/${equipoB[2].nombre}.png"></div>`;
     }
     vidaJugadoresDire();
-}
+    
+};
 //Asignacion de heroes con su correspondiente player
 let asignacionRadiant = () =>{
     for(let i = 0; i< equipoA.length; i++){
@@ -173,27 +178,38 @@ let asignacionDire = () =>{
     };
 
 };
-//Asignamos la vida a cada heroe
+//Asignamos la vida a cada heroe 
 let vidaJugadoresRadiant = () =>{
     for(let i = 0; i<equipoA.length; i++){
-        showVidaP1= document.getElementById("vidap1");
+        showVidaP1 = document.getElementById("vidap1");
         showVidaP1.innerHTML = `${p1.vida}`;
+        
+
         showVidaP2= document.getElementById("vidap2");
         showVidaP2.innerHTML = `${p2.vida}`;
+        
+
         showVidaP3= document.getElementById("vidap3");
         showVidaP3.innerHTML = `${p3.vida}`;
-    }
-}
+        
+    };
+};
 let vidaJugadoresDire = () =>{
     for(let i = 0; i<equipoB.length; i++){
         showVidaP4= document.getElementById("vidap4");
         showVidaP4.innerHTML = `${p4.vida}`;
+        
+
         showVidaP5= document.getElementById("vidap5");
         showVidaP5.innerHTML = `${p5.vida}`;
+        
+
         showVidaP6= document.getElementById("vidap6");
         showVidaP6.innerHTML = `${p6.vida}`;
-    }
-}
+        
+    };
+};
+
 
 //Función para el ataque
 let atacar = () => {
@@ -240,14 +256,20 @@ let combatWiner= () =>{
         resolveIn(1000).then(delay => {
 
             cambiaPantalla("screen2","screen3");
-            
+            showNombreP2= document.getElementById("fighter2");
+            showNombreP2.innerHTML = `${p2.nombre}`;
+            showNombreP5= document.getElementById("fighter5");
+            showNombreP5.innerHTML = `${p5.nombre}`;
         });
     }else if(p4.vida < 1){
         mensaje.innerHTML = `¡¡¡${p1.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
             cambiaPantalla("screen2","screen3");
-            
+            showNombreP2= document.getElementById("fighter2");
+            showNombreP2.innerHTML = `${p2.nombre}`;
+            showNombreP5= document.getElementById("fighter5");
+            showNombreP5.innerHTML = `${p5.nombre}`;
         });    
     };
     console.log(p1.vida);

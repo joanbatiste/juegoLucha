@@ -133,7 +133,19 @@ p2{
     flex-direction: column;
     
 }
-
+.presentacionLucha1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 4em;
+    color: rgb(247, 231, 6);
+}
+.nombreLuchador{
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
+    color: rgb(247, 231, 6);
+}
 
 .combate1{
     width: 100%;
