@@ -249,12 +249,8 @@ p2{
     flex-direction: column;
     
 }
-#winner3{
-    font-family: 'Cinzel', serif;
-    color: tomato;
-    font-size: 2em;
-}
-#vidap3{
+
+/* #vidap3{
     font-family: 'Cinzel', serif;
     color: white;
     font-size: 2em;
@@ -263,4 +259,4 @@ p2{
     font-family: 'Cinzel', serif;
     color: white;
     font-size: 2em;
-}
+} */
