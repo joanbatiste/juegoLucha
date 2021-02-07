@@ -62,22 +62,23 @@ let combatWiner2= () =>{
 };
 
 let resultadoFinal = () => {
-    if(marcadorRadiant == 2){
+    if(marcadorRadiant >= 2){
         cambiaPantalla("screen4","screen5");
-        showGanadorEquipoA = document.getElementsByClassName("luchadoresRadiant");
-        showGanadorEquipoA.innerHTML = `
-            <div ><img src="img/${p1.nombre}.png"></div>
-            <div ><img src="img/${p2.nombre}.png"></div>
-            <div ><img src="img/${p3.nombre}.png"></div>
-        `;
+        showGanador1 = document.getElementById("radiant1");
+        showGanador1.innerHTML = `<div ><img src="img/${p1.nombre}.png"></div>`
+        showGanador2 = document.getElementById("radiant2");
+        showGanador2.innerHTML = `<div ><img src="img/${p2.nombre}.png"></div>`
+        showGanador3 = document.getElementById("radiant3");
+        showGanador3.innerHTML = `<div ><img src="img/${p3.nombre}.png"></div>`
+        
 
-    }else if(marcadorDire == 2){
+    }else if(marcadorDire >= 2){
         cambiaPantalla("screen4", "screen6")
-        showGanadorEquipoB = document.getElementsByClassName("luchadoresDire");
-        showGanadorEquipoB.innerHTML = `
-            <div ><img src="img/${p4.nombre}.png"></div>
-            <div ><img src="img/${p5.nombre}.png"></div>
-            <div ><img src="img/${p6.nombre}.png"></div>
-        `;
+        showGanador4 = document.getElementById("dire4");
+        showGanador4.innerHTML = `<div ><img src="img/${p4.nombre}.png"></div>`
+        showGanador5 = document.getElementById("dire5");
+        showGanador5.innerHTML = `<div ><img src="img/${p5.nombre}.png"></div>`
+        showGanador6 = document.getElementById("dire6");
+        showGanador6.innerHTML = `<div ><img src="img/${p6.nombre}.png"></div>`
     };
 };

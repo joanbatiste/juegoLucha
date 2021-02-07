@@ -92,7 +92,7 @@ body{
     display: flex;
     object-fit: contain;
     box-shadow: 0 0 45px rgb(4, 240, 44);
-    background: linear-gradient(to center, black, grey);
+    background: linear-gradient(to top, black, grey);
     border-radius: 2em;
 }
 
@@ -102,7 +102,7 @@ body{
     display: flex;
     object-fit: contain;
     box-shadow: 0 0 45px rgb(241, 12, 4);
-    background: linear-gradient(to center, black, grey);
+    background: linear-gradient(to top, black, grey);
     border-radius: 2em;
 }
 .versus{
