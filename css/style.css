@@ -133,13 +133,20 @@ p2{
     flex-direction: column;
     
 }
-.presentacionLucha1{
+.anuncioLucha{
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Cinzel', serif;
     font-size: 4em;
     color: rgb(247, 231, 6);
+}
+.combatientes{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .nombreLuchador{
     font-family: 'Cinzel', serif;
@@ -174,26 +181,35 @@ p2{
     background-color: orange;
     cursor: pointer;
 }
-.contadorVida{
-    width: 7em;
-    height: 3em;
-    border: 0.1em solid white;
-    
-}
-#vidap1{
+.contadores{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
     font-family: 'Cinzel', serif;
-    color: white;
+    color: rgb(247, 231, 6);
+    font-size: 2em;
+}
+/* .contadorVida{
+    
+    align-items: center;
+    justify-content: center;   
+} */
+/* #vidap1{
+    font-family: 'Cinzel', serif;
+    color: rgb(247, 231, 6);
     font-size: 2em;
 }
 #vidap4{
     font-family: 'Cinzel', serif;
-    color: white;
+    color: rgb(247, 231, 6);
     font-size: 2em;
-}
-#winner1{
+} */
+.ganador{
     font-family: 'Cinzel', serif;
-    color: tomato;
-    font-size: 2em;
+    color: rgb(221, 37, 5);
+    font-size: 7em;
 }
 #screen3{
     display: flex;
@@ -203,7 +219,7 @@ p2{
     
 }
 
-#vidap2{
+/* #vidap2{
     font-family: 'Cinzel', serif;
     color: white;
     font-size: 2em;
@@ -212,7 +228,7 @@ p2{
     font-family: 'Cinzel', serif;
     color: white;
     font-size: 2em;
-}
+} */
 #strike1{
     width: 5em;
     height: 5em;
@@ -225,11 +241,7 @@ p2{
     background-color: orange;
     cursor: pointer;
 }
-#winner2{
-    font-family: 'Cinzel', serif;
-    color: tomato;
-    font-size: 2em;
-}
+
 #screen4{
     display: flex;
     align-items: center;

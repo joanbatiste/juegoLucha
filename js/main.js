@@ -253,8 +253,10 @@ let combatWiner= () =>{
     mensaje = document.getElementById("winner1");
     if (p1.vida < 1){
         marcadorDire += 1;
+        showVidaP1.innerHTML = `${p1.vida = 0}`;
+        document.getElementById("strike").onclick="";
         mensaje.innerHTML = `¡¡¡${p4.nombre} Wins!!!`;
-        resolveIn(1000).then(delay => {
+        resolveIn(3000).then(delay => {
 
             cambiaPantalla("screen2","screen3");
             showNombreP2= document.getElementById("fighter2");
@@ -264,8 +266,10 @@ let combatWiner= () =>{
         });
     }else if(p4.vida < 1){
         marcadorRadiant += 1;
+        showVidaP4.innerHTML = `${p4.vida = 0}`;
+        document.getElementById("strike").onclick="";
         mensaje.innerHTML = `¡¡¡${p1.nombre} Wins!!!`;
-        resolveIn(1000).then(delay => {
+        resolveIn(3000).then(delay => {
 
             cambiaPantalla("screen2","screen3");
             showNombreP2= document.getElementById("fighter2");

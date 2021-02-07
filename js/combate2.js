@@ -40,6 +40,8 @@ let combatWiner1= () =>{
     mensaje = document.getElementById("winner2");
     if (p2.vida < 1){
         marcadorDire += 1;
+        showVidaP2.innerHTML = `${p2.vida = 0}`;
+        document.getElementById("strike1").onclick="";
         mensaje.innerHTML = `¡¡¡${p5.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
@@ -51,6 +53,8 @@ let combatWiner1= () =>{
         });
     }else if(p5.vida < 1){
         marcadorRadiant += 1;
+        showVidaP5.innerHTML = `${p5.vida = 0}`;
+        document.getElementById("strike1").onclick="";
         mensaje.innerHTML = `¡¡¡${p2.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
