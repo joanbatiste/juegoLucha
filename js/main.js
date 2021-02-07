@@ -282,8 +282,16 @@ let combatWiner= () =>{
     showVidaP1.innerHTML = `${p1.vida}`;
     showVidaP4.innerHTML = `${p4.vida}`;
 };
+
+const reset = document.getElementById('resetButton1');
+reset.addEventListener('click', () => {
+    window.location.reload();
+})
     
-    
-    
+
+const reset2 = document.getElementById('resetButton2');
+reset2.addEventListener('click', () => {
+    window.location.reload();
+})  
 
 

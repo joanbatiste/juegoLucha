@@ -67,7 +67,7 @@ body{
     display: flex;
     flex-direction: row;
     margin-top: 2em;
-    border: 0.1em solid white;
+    
 }
 .bando{
     display: flex;
@@ -76,7 +76,7 @@ body{
     
     width: 40%;
     height: 27em;
-    border: 0.1em solid white;
+    
 }
 .rivales{
     width: 90%;
@@ -112,7 +112,7 @@ body{
     justify-content: center;
     width: 20%;
     height: 27em;
-    border: 0.1em solid white;
+    
 }
 p1{
     font-family: 'Cinzel', serif;
@@ -161,7 +161,7 @@ p2{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    border: 0.1em solid white;
+    
 }
 
 
@@ -172,13 +172,13 @@ p2{
     justify-content: center;
     width: 100%;
     height: 7em;
-    border: 0.1em solid white;
+    
     
 }
 #strike{
     width: 5em;
     height: 5em;
-    background-color: orange;
+    
     cursor: pointer;
 }
 .contadores{
@@ -232,13 +232,13 @@ p2{
 #strike1{
     width: 5em;
     height: 5em;
-    background-color: orange;
+    
     cursor: pointer;
 }
 #strike2{
     width: 5em;
     height: 5em;
-    background-color: orange;
+    
     cursor: pointer;
 }
 
@@ -250,13 +250,8 @@ p2{
     
 }
 
-/* #vidap3{
-    font-family: 'Cinzel', serif;
-    color: white;
-    font-size: 2em;
+.resetButton{
+    width: 5em;
+    height: 2em;
+    background-color: tomato;
 }
-#vidap6{
-    font-family: 'Cinzel', serif;
-    color: white;
-    font-size: 2em;
-} */
