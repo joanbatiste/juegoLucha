@@ -251,7 +251,10 @@ p2{
 }
 
 .resetButton{
-    width: 5em;
-    height: 2em;
+    width: 10em;
+    height: 5em;
     background-color: tomato;
+    margin-top: 5em;
+    font-family: 'Cinzel', serif;
+    font-size: 2em;
 }
