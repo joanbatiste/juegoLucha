@@ -39,7 +39,7 @@ let combatWiner1= () =>{
     showVidaP5= document.getElementById("vidap5");
     mensaje = document.getElementById("winner2");
     if (p2.vida < 1){
-        
+        marcadorDire += 1;
         mensaje.innerHTML = `¡¡¡${p5.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
@@ -50,6 +50,7 @@ let combatWiner1= () =>{
             showNombreP6.innerHTML = `${p6.nombre}`;
         });
     }else if(p5.vida < 1){
+        marcadorRadiant += 1;
         mensaje.innerHTML = `¡¡¡${p2.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 

@@ -244,14 +244,15 @@ let atacar = () => {
     combatWiner()
     
 };
-
+let marcadorRadiant = 0;
+let marcadorDire = 0;
 //Ganador combates
 let combatWiner= () =>{
     showVidaP1= document.getElementById("vidap1")
     showVidaP4= document.getElementById("vidap4");
     mensaje = document.getElementById("winner1");
     if (p1.vida < 1){
-        
+        marcadorDire += 1;
         mensaje.innerHTML = `¡¡¡${p4.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
@@ -262,6 +263,7 @@ let combatWiner= () =>{
             showNombreP5.innerHTML = `${p5.nombre}`;
         });
     }else if(p4.vida < 1){
+        marcadorRadiant += 1;
         mensaje.innerHTML = `¡¡¡${p1.nombre} Wins!!!`;
         resolveIn(1000).then(delay => {
 
