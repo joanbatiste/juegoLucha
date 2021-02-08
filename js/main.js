@@ -182,7 +182,7 @@ let asignacionDire = () =>{
 let vidaJugadoresRadiant = () =>{
     for(let i = 0; i<equipoA.length; i++){
         showVidaP1 = document.getElementById("vidap1");
-        showVidaP1.innerHTML = `${p1.vida}`;
+        showVidaP1.innerHTML = `(${p1.vida})`;
         
 
         showVidaP2= document.getElementById("vidap2");
